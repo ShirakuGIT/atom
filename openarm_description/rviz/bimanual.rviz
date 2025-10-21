@@ -1,0 +1,405 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 138
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /TF2
+        - /TF2/Frames1
+      Splitter Ratio: 0.6673728823661804
+    Tree Height: 327
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        neck_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        neck_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        neck_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        neck_roll:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        neck_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_body_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_hand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_hand_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        openarm_left_left_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_left_right_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_hand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_hand_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        openarm_right_left_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        openarm_right_right_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Mass Properties:
+        Inertia: false
+        Mass: false
+      Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: false
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        head_rod_meta:
+          Value: true
+        head_rod_stable:
+          Value: true
+        left_wrist_pose_meta:
+          Value: true
+        neck_base:
+          Value: true
+        neck_camera:
+          Value: true
+        neck_pitch:
+          Value: false
+        neck_roll:
+          Value: false
+        neck_yaw:
+          Value: false
+        openarm_body_link0:
+          Value: false
+        openarm_left_hand:
+          Value: false
+        openarm_left_hand_tcp:
+          Value: false
+        openarm_left_left_finger:
+          Value: false
+        openarm_left_link0:
+          Value: false
+        openarm_left_link1:
+          Value: false
+        openarm_left_link2:
+          Value: false
+        openarm_left_link3:
+          Value: false
+        openarm_left_link4:
+          Value: false
+        openarm_left_link5:
+          Value: false
+        openarm_left_link6:
+          Value: false
+        openarm_left_link7:
+          Value: false
+        openarm_left_right_finger:
+          Value: false
+        openarm_right_hand:
+          Value: false
+        openarm_right_hand_tcp:
+          Value: false
+        openarm_right_left_finger:
+          Value: false
+        openarm_right_link0:
+          Value: false
+        openarm_right_link1:
+          Value: false
+        openarm_right_link2:
+          Value: false
+        openarm_right_link3:
+          Value: false
+        openarm_right_link4:
+          Value: false
+        openarm_right_link5:
+          Value: false
+        openarm_right_link6:
+          Value: false
+        openarm_right_link7:
+          Value: false
+        openarm_right_right_finger:
+          Value: false
+        right_wrist_pose_meta:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 0.4000000059604645
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          head_rod_meta:
+            {}
+          head_rod_stable:
+            {}
+          left_wrist_pose_meta:
+            {}
+          openarm_body_link0:
+            neck_base:
+              neck_yaw:
+                neck_pitch:
+                  neck_roll:
+                    neck_camera:
+                      {}
+            openarm_left_link0:
+              openarm_left_link1:
+                openarm_left_link2:
+                  openarm_left_link3:
+                    openarm_left_link4:
+                      openarm_left_link5:
+                        openarm_left_link6:
+                          openarm_left_link7:
+                            openarm_left_hand:
+                              openarm_left_hand_tcp:
+                                {}
+                              openarm_left_left_finger:
+                                {}
+                              openarm_left_right_finger:
+                                {}
+            openarm_right_link0:
+              openarm_right_link1:
+                openarm_right_link2:
+                  openarm_right_link3:
+                    openarm_right_link4:
+                      openarm_right_link5:
+                        openarm_right_link6:
+                          openarm_right_link7:
+                            openarm_right_hand:
+                              openarm_right_hand_tcp:
+                                {}
+                              openarm_right_left_finger:
+                                {}
+                              openarm_right_right_finger:
+                                {}
+          right_wrist_pose_meta:
+            {}
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 2.9972939491271973
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -0.06632281839847565
+        Y: 0.15429148077964783
+        Z: 0.20466691255569458
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.32479599118232727
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 0.16681602597236633
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1020
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd00000001000000000000027d000003a7fc0200000002fb000000100044006900730070006c00610079007301000000370000020c000000b500fffffffb0000000a005600690065007700730100000248000001960000009a00ffffff000004fe000003a700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 0
+  Y: 28

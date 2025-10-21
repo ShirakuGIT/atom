@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:macro name="openarm_neck" params="parent">
+        
+        <!-- NECK BASE -->
+        <link name="neck_base">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.04" length="0.1"/>
+                </geometry>
+                <material name="grey">
+                    <color rgba="0.5 0.5 0.5 1"/>
+                </material>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.04" length="0.1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="0.2"/>
+                <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+            </inertial>
+        </link>
+
+        <joint name="neck_base_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="neck_base"/>
+            <origin xyz="0 0 0.8" rpy="0 0 0"/>  <!-- Mount 15cm above body -->
+        </joint>
+
+        <!-- NECK YAW (pan left/right) -->
+        <link name="neck_yaw">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.035" length="0.08"/>
+                </geometry>
+                <material name="grey"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.035" length="0.08"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="0.15"/>
+                <inertia ixx="0.0008" ixy="0" ixz="0" iyy="0.0008" iyz="0" izz="0.0008"/>
+            </inertial>
+        </link>
+
+        <joint name="neck_yaw_joint" type="revolute">
+            <parent link="neck_base"/>
+            <child link="neck_yaw"/>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit lower="-1.57" upper="1.57" effort="10" velocity="2.0"/>
+        </joint>
+
+        <!-- NECK PITCH (tilt up/down) -->
+        <link name="neck_pitch">
+            <visual>
+                <geometry>
+                    <box size="0.06 0.08 0.04"/>
+                </geometry>
+                <material name="grey"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="0.06 0.08 0.04"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="0.12"/>
+                <inertia ixx="0.0006" ixy="0" ixz="0" iyy="0.0006" iyz="0" izz="0.0006"/>
+            </inertial>
+        </link>
+
+        <joint name="neck_pitch_joint" type="revolute">
+            <parent link="neck_yaw"/>
+            <child link="neck_pitch"/>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+            <axis xyz="0 1 0"/>
+            <limit lower="-0.8" upper="0.8" effort="10" velocity="2.0"/>
+        </joint>
+
+        <!-- NECK ROLL (tilt side) -->
+        <link name="neck_roll">
+            <visual>
+                <geometry>
+                    <box size="0.05 0.06 0.08"/>
+                </geometry>
+                <material name="grey"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="0.05 0.06 0.08"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="0.1"/>
+                <inertia ixx="0.0005" ixy="0" ixz="0" iyy="0.0005" iyz="0" izz="0.0005"/>
+            </inertial>
+        </link>
+
+        <joint name="neck_roll_joint" type="revolute">
+            <parent link="neck_pitch"/>
+            <child link="neck_roll"/>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+            <axis xyz="1 0 0"/>
+            <limit lower="-0.5" upper="0.5" effort="10" velocity="2.0"/>
+        </joint>
+
+        <!-- CAMERA LINK (head) -->
+        <link name="neck_camera">
+            <visual>
+                <geometry>
+                    <box size="0.08 0.12 0.06"/>
+                </geometry>
+                <material name="blue">
+                    <color rgba="0 0.5 1 1"/>
+                </material>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="0.08 0.12 0.06"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="0.08"/>
+                <inertia ixx="0.0003" ixy="0" ixz="0" iyy="0.0003" iyz="0" izz="0.0003"/>
+            </inertial>
+        </link>
+
+        <joint name="neck_camera_joint" type="fixed">
+            <parent link="neck_roll"/>
+            <child link="neck_camera"/>
+            <origin xyz="0 0 0.06" rpy="0 0 0"/>
+        </joint>
+
+        <!-- GAZEBO CAMERA PLUGIN -->
+        <gazebo reference="neck_camera">
+            <sensor name="neck_camera_sensor" type="camera">
+                <update_rate>30.0</update_rate>
+                <camera name="neck_cam">
+                    <horizontal_fov>1.3962634</horizontal_fov>
+                    <image>
+                        <width>640</width>
+                        <height>480</height>
+                        <format>R8G8B8</format>
+                    </image>
+                    <clip>
+                        <near>0.02</near>
+                        <far>10</far>
+                    </clip>
+                </camera>
+                <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                    <alwaysOn>true</alwaysOn>
+                    <updateRate>30.0</updateRate>
+                    <cameraName>neck_camera</cameraName>
+                    <imageTopicName>/neck_camera/image_raw</imageTopicName>
+                    <cameraInfoTopicName>/neck_camera/camera_info</cameraInfoTopicName>
+                    <frameName>neck_camera</frameName>
+                </plugin>
+            </sensor>
+        </gazebo>
+        
+    </xacro:macro>
+    
+</robot>
