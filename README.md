@@ -5,6 +5,9 @@ It maps human wrist and head motion to robot joint trajectories using adaptive i
 
 ---
 
+![Real Steel](realsteel.gif)
+![Teleoperation](teleop.gif)
+
 ## Overview
 
 * Real-time dual-arm and neck teleoperation
