@@ -39,6 +39,7 @@
             "
             >
     <xacro:include filename="$(find openarm_description)/urdf/body/openarm_neck.xacro" />
+    <xacro:include filename="$(find openarm_description)/urdf/sensors/camera.xacro"/>
     <xacro:include filename="$(find openarm_description)/urdf/arm/openarm_macro.xacro" />
     <xacro:include filename="$(find openarm_description)/urdf/arm/openarm_arm.xacro" />
     <xacro:include filename="$(find openarm_description)/urdf/body/openarm_body_macro.xacro" />
@@ -68,8 +69,18 @@
         kinematics="${body_kinematics}"
         kinematics_link="${body_kinematics_link}" />
 
-	<!-- neck -->
-	<xacro:openarm_neck parent="openarm_body_link0" />
+        <!-- neck -->
+        <xacro:openarm_neck parent="openarm_body_link0" />
+
+        <!-- 1. LEFT ARM END-EFFECTOR CAMERA -->
+        <xacro:openarm_camera name="left_ee_camera" parent_link="openarm_left_hand_tcp">
+            <origin xyz="0.03 0 0" rpy="0 0 0"/>
+        </xacro:openarm_camera>
+
+        <!-- 2. RIGHT ARM END-EFFECTOR CAMERA -->
+        <xacro:openarm_camera name="right_ee_camera" parent_link="openarm_right_hand_tcp">
+            <origin xyz="0.03 0 0" rpy="0 0 0"/>
+        </xacro:openarm_camera>
 
         <!-- left arm -->
         <xacro:openarm_arm

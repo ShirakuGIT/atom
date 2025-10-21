@@ -48,6 +48,7 @@ Launch your robot description and TF publishers, then run:
 
 ```bash
 ros2 run teleop_controller tf_listener
+ros2 launch openarm_bringup openarm.bimanual.launch.py use_fake_hardware:=true
 ros2 run controller_manager spawner neck_joint_trajectory_controller
 ros2 run teleop_controller neck_tracker
 ```

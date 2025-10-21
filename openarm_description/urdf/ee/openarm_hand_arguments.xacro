@@ -17,7 +17,7 @@
   <xacro:arg name="tcp_rpy" default="0 0 0" />
 
   <!-- Is the robot being simulated in gazebo? -->
-  <!-- <xacro:arg name="gazebo" default="false" /> -->
+  <xacro:arg name="gazebo" default="false" />
 
   <!-- Name of the description package -->
   <xacro:arg name="description_pkg" default="openarm_description" />
