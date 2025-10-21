@@ -44,7 +44,7 @@ source install/setup.bash
 Launch your robot description and TF publishers, then run:
 
 ```bash
-ros2 run adaptive_teleoperation_mimicry teleop_controller
+ros2 run teleop_controller tf_listener
 ```
 
 ATOM will:
