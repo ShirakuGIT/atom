@@ -48,6 +48,8 @@ Launch your robot description and TF publishers, then run:
 
 ```bash
 ros2 run teleop_controller tf_listener
+ros2 run controller_manager spawner neck_joint_trajectory_controller
+ros2 run teleop_controller neck_tracker
 ```
 
 ATOM will:
